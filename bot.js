@@ -31,15 +31,15 @@ var questionResponse = [`YEAH!!!!!!!!!!!`, `Nope!`, `Maybe?`, `Not really...`, `
 client.on('message', message => {
   if (message.content.startsWith(`%say`) || message.author === client.user) return;
 
-  if (message.content.toLowerCase().includes(`hi milk`) || message.content.toLowerCase().includes(`hello milk`)) {
+  if (message.content.toLowerCase().includes(`hi milk`) || message.content.toLowerCase().includes(`hello milk`) || message.content.toLowerCase().includes(`milk hi`) || message.content.toLowerCase().includes(`milk hello`)) {
     return message.channel.send(`${helloResponse[Math.floor(Math.random() * helloResponse.length)]}`);
   }
 
-  if (message.content.toLowerCase().includes(`bye milk`) || message.content.toLowerCase().includes(`goodbye milk`)) {
+  if (message.content.toLowerCase().includes(`bye milk`) || message.content.toLowerCase().includes(`goodbye milk`) || message.content.toLowerCase().includes(`milk bye`) || message.content.toLowerCase().includes(`milk goodbye`) || message.content.toLowerCase().includes(`milk see you`) || message.content.toLowerCase().includes(`see you later milk`) || message.content.toLowerCase().includes(`see you milk`)) {
     return message.channel.send(`${byeResponse[Math.floor(Math.random() * byeResponse.length)]}`);
   }
 
-  if (message.content.toLowerCase().includes(`good morning`) || message.content.toLowerCase().includes(`goodmorning`) || message.content.toLowerCase().includes(`gm`) || message.content.toLowerCase().includes(`morning`) || message.content.toLowerCase().includes(`mornin`)) {
+  if (message.content.toLowerCase().includes(`goodsmorning`) || message.content.toLowerCase().includes(`good morning`) || message.content.toLowerCase().includes(`goodmorning`) || message.content.toLowerCase().includes(`gm`) || message.content.toLowerCase().includes(`mornin`)) {
     return message.channel.send(`${wakeResponse[Math.floor(Math.random() * wakeResponse.length)]}`);
   }
 
@@ -56,7 +56,7 @@ client.on('message', message => {
   }
 
   if (message.content.toLowerCase().includes(`gwa gwa`)) {
-    return message.channel.send(`${awaResponse[Math.floor(Math.random() * gwaResponse.length)]}`);
+    return message.channel.send(`${gwaResponse[Math.floor(Math.random() * gwaResponse.length)]}`);
   }
 
   if (message.content.toLowerCase().includes(`milk im sorry`) || message.content.toLowerCase().includes(`milk im so sorry`) || message.content.toLowerCase().includes(`im sorry milk`) || message.content.toLowerCase().includes(`im so sorry milk`) || message.content.toLowerCase().includes(`milk i'm sorry`) || message.content.toLowerCase().includes(`milk i'm so sorry`) || message.content.toLowerCase().includes(`i'm sorry milk`) || message.content.toLowerCase().includes(`i'm so sorry milk`)) {
@@ -74,7 +74,7 @@ client.on('message', message => {
   if (message.content.toLowerCase().includes(`milk are`) || message.content.toLowerCase().includes(`milk can`) || message.content.toLowerCase().includes(`milk should`) || message.content.toLowerCase().includes(`milk would`) || message.content.toLowerCase().includes(`milk could`) || message.content.toLowerCase().includes(`milk if`) || message.content.toLowerCase().includes(`milk do`)) {
     return message.channel.send(`${questionResponse[Math.floor(Math.random() * questionResponse.length)]}`);
   }
-
+  
   if (message.content.toLowerCase().includes(`thank u milk`) || message.content.toLowerCase().includes(`thank you milk`) || message.content.toLowerCase().includes(`milk thank`) || message.content.toLowerCase().includes(`thanks milk`)) {
     return message.channel.send(`${thankResponse[Math.floor(Math.random() * thankResponse.length)]}`);
   }
