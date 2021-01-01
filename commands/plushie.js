@@ -3,10 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = {
-  n: 'cow',
-	a: ['cow', 'sendcow', 'realcow'],
-  d: 'Here is a cow for you!',
-  u: '%cow',
+    n: 'plushie',
+    a: ['plushie', 'sendplushie', 'plushcow'],
+    d: 'Here is a plushie for you!',
+    u: '%plushie',
     
   async execute(client, message, args) {
 
@@ -14,7 +14,7 @@ module.exports = {
       return images[Math.floor( Math.random() * images.length )];
     }
 
-    fs.readdir('./real', function( err, files ) {
+    fs.readdir('./toys', function( err, files ) {
       if (err){
         console.log('error:', err);
         return;
@@ -25,7 +25,7 @@ module.exports = {
           images.push(f);
         } );
       
-        const imagePath = path.join('./real/' + randomFromArray(images));
+        const imagePath = path.join('./toys/' + randomFromArray(images));
       
         message.channel.send("here you go!", {
           file: imagePath
