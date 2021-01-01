@@ -4,7 +4,7 @@ module.exports = {
 	n: 'help',
 	a: ['help', 'h', 'command', 'commands', 'c'],
     d: 'It\'s time to help!',
-    u: '%help or %help <command>',
+    u: 'moo!help or moo!help <command>',
     
     async execute(client, message, args) {
         const { commands } = message.client;

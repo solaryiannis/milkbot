@@ -6,7 +6,7 @@ module.exports = {
   n: 'cow',
 	a: ['cow', 'sendcow', 'realcow'],
   d: 'Here is a cow for you!',
-  u: '%cow',
+  u: 'moo!cow',
     
   async execute(client, message, args) {
 

@@ -4,7 +4,7 @@ module.exports = {
     n: 'say',
     a: ['say', 'speak', 's'],
     d: 'Let Milk speak!',
-    u: '%say <text>',
+    u: 'moo!say <text>',
       
     async execute(client, message, args) {
       message.channel.send(args.join(" "));
