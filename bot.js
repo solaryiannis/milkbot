@@ -75,7 +75,7 @@ client.on('message', message => {
     return message.channel.send(`${questionResponse[Math.floor(Math.random() * questionResponse.length)]}`);
   }
 
-  if (message.content.toLowerCase().includes(`thank u milk`) || message.content.toLowerCase().includes(`thank you milk`) || message.content.toLowerCase().includes(`milk thank`) || message.content.toLowerCase().includes(`thanks milk`) {
+  if (message.content.toLowerCase().includes(`thank u milk`) || message.content.toLowerCase().includes(`thank you milk`) || message.content.toLowerCase().includes(`milk thank`) || message.content.toLowerCase().includes(`thanks milk`)) {
     return message.channel.send(`${questionResponse[Math.floor(Math.random() * questionResponse.length)]}`);
   }
 
