@@ -25,6 +25,7 @@ var tiredResponse = [`Go bed!!!`, `Sleep!`, `Go rest! It's okay!`];
 var sorryResponse = [`Don't be!!`, `It's quite alright!!!`, `It's okay!`, `You did nothing wrong!`];
 var awaResponse = [`AWA`, `AWA!!!`, `awa!!!`, `!!!!!!!!!!!!!!!! awa :3`, `Awa!!`, `awa? :O`, `awa!!!!!!!!!!!!!!!!!`,];
 var gwaResponse = [`GWA GWA`, `GWA GWA!!!`, `gwa gwa!!!`, `!!!!!!!!!!!!!!!! gwa gwa :3`, `Gwa Gwa!!`, `gwa gwa? :O`, `gwa gwa!!!!!!!!!!!!!!!!!`,];
+var thankResponse = [`You're welcome!`, `Always happy to help!!!`, `No problem!! <3`, `No need to thank me!!!`, `No, thank YOU!!! :D`];
 var questionResponse = [`YEAH!!!!!!!!!!!`, `Nope!`, `Maybe?`, `Not really...`, `Probably!!`, `Maybe in the future!!`, `Yes!`, `No!!!!!!!!!!!!!!!!`, `I'm not sure...`];
 
 client.on('message', message => {
@@ -71,6 +72,10 @@ client.on('message', message => {
   }
 
   if (message.content.toLowerCase().includes(`milk are`) || message.content.toLowerCase().includes(`milk can`) || message.content.toLowerCase().includes(`milk should`) || message.content.toLowerCase().includes(`milk would`) || message.content.toLowerCase().includes(`milk could`) || message.content.toLowerCase().includes(`milk if`) || message.content.toLowerCase().includes(`milk do`)) {
+    return message.channel.send(`${questionResponse[Math.floor(Math.random() * questionResponse.length)]}`);
+  }
+
+  if (message.content.toLowerCase().includes(`thank u milk`) || message.content.toLowerCase().includes(`thank you milk`) || message.content.toLowerCase().includes(`milk thank`) || message.content.toLowerCase().includes(`thanks milk`) {
     return message.channel.send(`${questionResponse[Math.floor(Math.random() * questionResponse.length)]}`);
   }
 
