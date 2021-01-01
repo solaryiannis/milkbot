@@ -17,7 +17,7 @@ module.exports = {
   	      helpEmbed.addField('\u200b', '\u200b');
   	      helpEmbed.addField('', `For help with a specific command, type moo!<command>`);
   	      helpEmbed.setTimestamp();
-  	      helpEmbed.setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
+  	      helpEmbed.setFooter(`It's Milk!`, client.user.avatarURL);
           return message.channel.send({helpEmbed});
         }
 
@@ -29,7 +29,7 @@ module.exports = {
   	embed.addField('Description', command.d, true);
   	embed.addField('Usage', command.u, true);
   	embed.setTimestamp();
-  	embed.setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
+  	embed.setFooter(`It's Milk!`, client.user.avatarURL);
     message.channel.send({embed});
 	},
 };
