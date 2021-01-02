@@ -13,6 +13,6 @@ module.exports = {
           return message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`moo!help <command>\`!`);
         }
 
-        message.channel.send(`**${command.n}** (known as ${command.a}).\n${command.d}.\n\nTo use this command: type \`${command.u}\`!`);
+        message.channel.send(`**${command.n}** (known as ${command.a.join(', ')}).\n${command.d}.\n\nTo use this command: type \`${command.u}\`!`);
 	},
 };
