@@ -13,15 +13,6 @@ module.exports = {
           return message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`moo!help <command>\`!`);
         }
 
-        const embed = new Discord.MessageEmbed();
-        embed.setColor(0xfca2e4);
-        embed.setTitle(`moo!help`);
-        embed.addField('Command Name (Aliases)', `${command.n} (${command.a.join(', ')})`);
-        embed.addField('\u200b', '\u200b');
-        embed.addField('Description', command.d, true);
-        embed.addField('Usage', command.u, true);
-        embed.setTimestamp();
-        embed.setFooter(`I'm ${message.client.user.tag}!`, message.client.user.avatarURL());
-        message.channel.send({embed});
+        message.channel.send(`**${command.n}** (known as ${command.a}).\n${command.d}.\n\nTo use this command: type \`${command.u}\`!`);
 	},
 };
