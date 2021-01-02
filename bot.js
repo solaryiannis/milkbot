@@ -29,7 +29,7 @@ var thankResponse = [`You're welcome!`, `Always happy to help!!!`, `No problem!!
 var questionResponse = [`YEAH!!!!!!!!!!!`, `Nope!`, `Maybe?`, `Not really...`, `Probably!!`, `Maybe in the future!!`, `Yes!`, `No!!!!!!!!!!!!!!!!`, `I'm not sure...`];
 
 client.on('message', message => {
-  if (message.content.startsWith(`%say`) || message.author === client.user) return;
+  if (message.content.startsWith(`%say`) || message.author === client.user || message.author.bot) return;
 
   if (message.content.toLowerCase().includes(`hi milk`) || message.content.toLowerCase().includes(`hello milk`) || message.content.toLowerCase().includes(`milk hi`) || message.content.toLowerCase().includes(`milk hello`)) {
     return message.channel.send(`${helloResponse[Math.floor(Math.random() * helloResponse.length)]}`);
@@ -83,7 +83,7 @@ client.on('message', message => {
     return message.channel.send(`${milkResponse[Math.floor(Math.random() * milkResponse.length)]}`);
   }
 
-	if (!message.content.startsWith(milkfix) || message.author.bot) return;
+	if (!message.content.startsWith(milkfix)) return;
 
   const args = message.content.slice(milkfix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
