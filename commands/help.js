@@ -15,13 +15,13 @@ module.exports = {
 
     const embed = new Discord.MessageEmbed();
     embed.setColor(0xF097DF);
-    embed.setTitle(`%help`);
+    embed.setTitle(`moo!help`);
   	embed.addField('Command Name (Aliases)', `${command.n} (${command.a.join(', ')})`);
   	embed.addField('\u200b', '\u200b');
   	embed.addField('Description', command.d, true);
   	embed.addField('Usage', command.u, true);
   	embed.setTimestamp();
-  	embed.setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
+  	embed.setFooter(`I'm Milk!`, client.user.avatarURL);
     message.channel.send({embed});
 	},
 };
