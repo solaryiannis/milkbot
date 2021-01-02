@@ -21,7 +21,7 @@ module.exports = {
   	embed.addField('Description', command.d, true);
   	embed.addField('Usage', command.u, true);
   	embed.setTimestamp();
-  	embed.setFooter(`I'm Milk!`, client.user.avatarURL);
+  	embed.setFooter(`I'm Milk!`, message.guild.iconURL());
     message.channel.send({embed});
 	},
 };
