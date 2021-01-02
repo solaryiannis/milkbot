@@ -28,7 +28,10 @@ module.exports = {
         const imagePath = path.join('./toys/' + randomFromArray(images));
       
         message.channel.send("here you go!", {
-          file: imagePath
+          files: [{
+            attachment: imagePath,
+            name: 'image.jpg'
+            }]
         });
       }
     } );
