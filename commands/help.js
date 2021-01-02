@@ -13,13 +13,18 @@ module.exports = {
           return message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`moo!help <command>\`!`);
         }
 
+    const commandName = command.n;
+    const commandAlias = command.a.join(', ');
+    const commandDescrip = command.d;
+    const commandUse = command.use;
+
     const embed = new Discord.MessageEmbed();
     embed.setColor(0xF097DF);
     embed.setTitle(`moo!help`);
-  	embed.addField('Command Name (Aliases)', `${command.n} (${command.a.join(', ')})`);
+  	embed.addField('Command Name (Aliases)', `${commandName} (${commandAlias})`);
   	embed.addField('\u200b', '\u200b');
-  	embed.addField('Description', command.d, true);
-  	embed.addField('Usage', command.u, true);
+  	embed.addField('Description', commandDescrip, true);
+  	embed.addField('Usage', commandUse, true);
   	embed.setTimestamp();
   	embed.setFooter(`I'm Milk!`, message.guild.iconURL());
     message.channel.send({embed});
