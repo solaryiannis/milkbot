@@ -1,0 +1,39 @@
+const Discord = require('discord.js');
+const fs = require('fs');
+const path = require('path');
+
+module.exports = {
+    n: 'juliet',
+    a: ['juliet', 'dog', 'puppy', 'pubby', 'pubyby'],
+    d: 'Here is Juliet for you!',
+    u: 'moo!juliet',
+    
+  async execute(client, message, args) {
+
+    function randomFromArray( images ){
+      return images[Math.floor( Math.random() * images.length )];
+    }
+
+    fs.readdir('./ouppy', function( err, files ) {
+      if (err){
+        console.log('error:', err);
+        return;
+      }
+      else{
+        let images = [];
+        files.forEach(function(f) {
+          images.push(f);
+        } );
+      
+        const imagePath = path.join('./puppy/' + randomFromArray(images));
+      
+        message.channel.send("here you go!", {
+          files: [{
+            attachment: imagePath,
+            name: 'image.jpg'
+            }]
+        });
+      }
+    } );
+  },
+};
