@@ -14,7 +14,7 @@ module.exports = {
       return images[Math.floor( Math.random() * images.length )];
     }
 
-    fs.readdir('./ouppy', function( err, files ) {
+    fs.readdir('./puppy', function( err, files ) {
       if (err){
         console.log('error:', err);
         return;
