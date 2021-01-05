@@ -52,7 +52,9 @@ client.on('message', message => {
   }
 
   if (message.content.toLowerCase().includes(`awa`)) {
-    return message.channel.send(`${awaResponse[Math.floor(Math.random() * awaResponse.length)]}`);
+    if (!message.content.toLowerCase().includes(`awake`) && !message.content.toLowerCase().includes(`away`) && !message.content.toLowerCase().includes(`aware`) && !message.content.toLowerCase().includes(`award`) && !message.content.toLowerCase().includes(`drawable`) && !message.content.toLowerCase().includes(`withdraw`) && !message.content.toLowerCase().includes(`awatt`)) {
+      return message.channel.send(`${awaResponse[Math.floor(Math.random() * awaResponse.length)]}`);
+    }
   }
 
   if (message.content.toLowerCase().includes(`gwa gwa`)) {
