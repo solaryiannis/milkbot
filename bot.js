@@ -47,7 +47,7 @@ client.on('message', message => {
     return message.channel.send(`${sleepResponse[Math.floor(Math.random() * sleepResponse.length)]}`);
   }
 
-  if (message.content.toLowerCase().includes(`sleepy`)) {
+  if (message.content.toLowerCase().includes(`sleepy`) && message.content.toLowerCase().includes(`moo!sleepy`)) {
     return message.channel.send(`${tiredResponse[Math.floor(Math.random() * tiredResponse.length)]}`);
   }
 
