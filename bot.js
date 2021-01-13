@@ -39,7 +39,7 @@ client.on('message', message => {
     return message.channel.send(`${byeResponse[Math.floor(Math.random() * byeResponse.length)]}`);
   }
 
-  if (message.content.toLowerCase().includes(`goodsmorning`) || message.content.toLowerCase().includes(`good morning`) || message.content.toLowerCase().includes(`goodmorning`) || message.content.toLowerCase().includes(`gm`) || message.content.toLowerCase().includes(`mornin`)) {
+  if (message.content.toLowerCase().includes(`goodsmorning`) || message.content.toLowerCase().includes(`good morning`) || message.content.toLowerCase().includes(`goodmorning`) || message.content.toLowerCase().includes(`mornin`)) {
     return message.channel.send(`${wakeResponse[Math.floor(Math.random() * wakeResponse.length)]}`);
   }
 
